@@ -14,6 +14,8 @@ namespace MBPC001.DAL
         private static iDAL instance = null;
         private static readonly object padlock = new object();
 
+        public static iDAL Instance { get => instance; }
+
         private DALSingleton()
         {
         }

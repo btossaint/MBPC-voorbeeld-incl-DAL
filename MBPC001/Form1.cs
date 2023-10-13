@@ -8,8 +8,10 @@ namespace MBPC001
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();            
             ShowMembersInComboBox();
+            // onderstaand uitzondering. Is om type SQL Server op te vragen voor de frontend!
+            tsl_DB.Text = $"Database: {DAL.DALSingleton.Instance.GetType().Name.ToString()}";
         }
 
         private void b_GetLotForMember_Click(object sender, EventArgs e)
