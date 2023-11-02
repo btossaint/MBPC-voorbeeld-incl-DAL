@@ -13,5 +13,7 @@ namespace MBPC001.DAL
         List<Member> ReadMembersWithLot();
         List<Lot> ReadLotMember(string _id);
         List<Lot> ReadLots();
+
+        void CreateMember(Member member);
     }
 }
