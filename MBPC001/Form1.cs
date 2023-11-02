@@ -11,7 +11,9 @@ namespace MBPC001
             InitializeComponent();            
             ShowMembersInComboBox();
             // onderstaand uitzondering. Is om type SQL Server op te vragen voor de frontend!
-            tsl_DB.Text = $"Database: {DAL.DALSingleton.Instance.GetType().Name.ToString()}";
+            tsl_DB.Text = $"Database: {DAL.DALSingleton.Instance.GetType().Name}";
+            //Member m = new Member("Bob","Tossaint","Adres2","Heerlen","6161FF","Nederland");
+            //m.CreateMember();
         }
 
         private void b_GetLotForMember_Click(object sender, EventArgs e)

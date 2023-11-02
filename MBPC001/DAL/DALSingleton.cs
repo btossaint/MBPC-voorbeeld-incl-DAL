@@ -14,6 +14,7 @@ namespace MBPC001.DAL
         private static iDAL instance = null;
         private static readonly object padlock = new object();
 
+        // for a display of the databasename on the frontend.
         public static iDAL Instance { get => instance; }
 
         private DALSingleton()
@@ -27,8 +28,8 @@ namespace MBPC001.DAL
                 {
                     if (instance == null)
                     {
-                        //instance = new MSSQLDAL();
-                        instance = new MySQLDAL();
+                        instance = new MSSQLDAL();
+                        //instance = new MySQLDAL();
                     }
                     return instance;
                 }

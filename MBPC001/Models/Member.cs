@@ -10,7 +10,7 @@ namespace MBPC001.Models
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public string Address { get; set; }
-        public string City { get; set; }        
+        public string City { get; set; }
         public string Zipcode { get; set; }
         public string Country { get; set; }
         public Member MemberId { get; set; } // Hans wat is dit in relatie tot het hier benoemde Id?
@@ -20,12 +20,22 @@ namespace MBPC001.Models
 
         public Member()
         {
-             
+
         }
         public Member(int _id, string _lastname)
         {
             Id = _id;
             Lastname = _lastname;
+        }
+
+        public Member(string _firstname, string _lastname, string _address, string _city, string _zipcode, string _country)
+        {
+            Firstname = _firstname;
+            Lastname = _lastname;
+            Address = _address;
+            City = _city;
+            Zipcode = _zipcode;
+            Country = _country;            
         }
 
         public List<Member> GetMembers()
@@ -40,9 +50,15 @@ namespace MBPC001.Models
             return sQLDal.ReadMembersWithLot();
         }
 
-        public int GetMemeberId(Member m)
-        { 
-            return m.Id;
+        public int GetMemberId()
+        {
+            return Id;
+        }
+
+        public void CreateMember()
+        {
+            iDAL sQLDal = DALSingleton.GetInstance();
+            sQLDal.CreateMember(this);
         }
     }
 }
