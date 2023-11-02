@@ -13,3 +13,7 @@ pinions on the Letters page.
 
 Another renowned benefit of the Circle are the six exclusive postal auctions organised each year, offering specialised or more common material from sheet or booklet Wildings and Machins through to Royal Mail’s 
 very latest issues. Typically, over 1,000 lots are offered with realistic reserve prices. The auctions provide members with an opportunity to expand their own collections and to offer duplicates to fellow members. 
+
+Voorbeeld ERD op basis van de opdracht
+
+![ERD](https://github.com/btossaint/MBPC-voorbeeld-incl-DAL/assets/13016225/92244f01-4d43-45fc-be01-15884bce81a9)
